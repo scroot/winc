@@ -8,7 +8,7 @@ package winc
 import (
 	"unsafe"
 
-	"github.com/tadvi/winc/w32"
+	"github.com/scroot/winc/w32"
 )
 
 func genPoint(p uintptr) (x, y int) {

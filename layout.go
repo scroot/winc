@@ -12,7 +12,7 @@ import (
 	"sort"
 	"unsafe"
 
-	"github.com/tadvi/winc/w32"
+	"github.com/scroot/winc/w32"
 )
 
 // Dockable component must satisfy interface to be docked.

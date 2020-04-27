@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/tadvi/winc"
-)
+import "github.com/scroot/winc"
 
 func main() {
 	mainWindow := winc.NewForm(nil)

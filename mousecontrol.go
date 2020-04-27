@@ -5,7 +5,7 @@
 package winc
 
 import (
-	"github.com/tadvi/winc/w32"
+	"github.com/scroot/winc/w32"
 )
 
 // MouseControl used for creating custom controls that need mouse hover or mouse leave events.

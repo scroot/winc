@@ -6,7 +6,7 @@
 package winc
 
 import (
-	"github.com/tadvi/winc/w32"
+	"github.com/scroot/winc/w32"
 )
 
 var DefaultBackgroundBrush = NewSystemColorBrush(w32.COLOR_BTNFACE)

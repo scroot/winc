@@ -8,7 +8,7 @@ package winc
 import (
 	"fmt"
 
-	"github.com/tadvi/winc/w32"
+	"github.com/scroot/winc/w32"
 )
 
 type ImageList struct {

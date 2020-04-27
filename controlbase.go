@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"syscall"
 
-	"github.com/tadvi/winc/w32"
+	"github.com/scroot/winc/w32"
 )
 
 type ControlBase struct {

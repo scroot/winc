@@ -4,7 +4,7 @@
 
 package winc
 
-import "github.com/tadvi/winc/w32"
+import "github.com/scroot/winc/w32"
 
 type ImageView struct {
 	ControlBase

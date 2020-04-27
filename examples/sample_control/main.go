@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/tadvi/winc"
-)
+import "github.com/scroot/winc"
 
 func main() {
 	mainWindow := NewTopForm(nil) // Our TopForm control gets created here.
