@@ -153,5 +153,6 @@ func (ca *Canvas) DrawText(text string, rect *Rect, format uint, font *Font, tex
 	previousTextColor := w32.SetTextColor(ca.hdc, w32.COLORREF(textColor))
 	defer w32.SetTextColor(ca.hdc, previousTextColor)
 
-	w32.DrawText(ca.hdc, text, len(text), rect.GetW32Rect(), format)
+	//w32.DrawText(ca.hdc, text, len(text), rect.GetW32Rect(), format)
+	w32.DrawText(ca.hdc, text, -1, rect.GetW32Rect(), format)
 }
