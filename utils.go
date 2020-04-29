@@ -97,6 +97,27 @@ func RegisterClass(className string, wndproc uintptr) {
 	}
 }
 
+func RegisterClass(className string, wndproc uintptr, ) {
+	instance := GetAppInstance()
+	icon := w32.LoadIcon(instance, w32.MakeIntResource(w32.IDI_APPLICATION))
+
+	var wc w32.WNDCLASSEX
+	wc.Size = uint32(unsafe.Sizeof(wc))
+	wc.Style = w32.CS_HREDRAW | w32.CS_VREDRAW
+	wc.WndProc = wndproc
+	wc.Instance = instance
+	wc.Background = w32.COLOR_BTNFACE + 1
+	wc.Icon = icon
+	wc.Cursor = w32.LoadCursor(0, w32.MakeIntResource(w32.IDC_ARROW))
+	wc.ClassName = syscall.StringToUTF16Ptr(className)
+	wc.MenuName = nil
+	wc.IconSm = icon
+
+	if ret := w32.RegisterClassEx(&wc); ret == 0 {
+		panic(syscall.GetLastError())
+	}
+}
+
 func RegClassOnlyOnce(className string) {
 	isExists := false
 	for _, class := range gRegisteredClasses {
